@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>FNL Rot13</title> 
+        
+        <style type = "text/css">
+            body
+            {
+                font-size:large;
+                text-align:center;
+            }
+            div{
+                margin:10px;
+            }
+            
+            #myInfo{
+                font-size:large;
+            }
+            
+            #myInput{
+                width:50%;
+                padding: 8px;
+                
+            }
+            
+           .information{
+               color:blue;
+           }
+           
+           
+        </style>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        
+    </head>
+    <body>
+       <h1>Rot13 Cipher</h1>
+       
+       <div id="myInfo" class="mySpace information">Some sort of html</div>
+      
+       <input type="text" id="myInput" placeholder="Enter the Dragon" autofocus/>
+       
+       <div id="myOutput">Output words</div>
+       
+       <div class="information">For FNL!</div>
+        
+        
+        
+        
+        
+    </body>
+    
+    <script type="text/javascript">
+        
+        $(document).ready( function(){
+            
+            $('#myInput').on('keyup', function(){
+                
+                var x = $(this).val();
+                var y = '';
+                
+                
+               for(i=0; i<x.length; i++){
+                   
+                   var c = x.charCodeAt(i);
+                   
+                   
+                   if(c >= 97 && c <= 122){
+                   
+                    if(x.charCodeAt(i) < 110)
+                        y += String.fromCharCode(c + 13 );
+                        
+                    else
+                        y += String.fromCharCode(c - 13 );
+                    
+               
+               } else if (c >= 65 && c <= 90){
+                   
+                   if(x.charCodeAt(i) < 77)
+                   y += String.fromCharCode(c + 13 );
+                   
+                   else
+                   y += String.fromCharCode(c - 13 );
+                   
+               } else {
+                   y += String.fromCharCode(c);
+               }
+               }
+               
+               $('#myOutput').html(y);
+                
+                console.log( x.charCodeAt(0) );
+            });
+            
+            
+            
+            console.log();
+        } );
+        
+        
+    </script>
+    
+    
+    
+</html>
