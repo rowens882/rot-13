@@ -3,30 +3,39 @@
     <head>
        <title>FNL Rot13</title> 
 
-        <!-- Latest compiled and minified CSS -->
+        <!-- Bootstrap Link -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
             
+        <!--jQuery Link-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         
     </head>
+
+
     <body>
        <div class="container" align="center">
+
    <h1 ><kbd>Rot13 Cipher</kbd></h1>
        
        <div id="myInfo" class="mySpace information">Cipher encodes letters by shifting them 13 places</div>
+     
+     <!--Background image set to the cipher-->
+      <div style="background-image:url('https://49.media.tumblr.com/tumblr_lsudn1Xqjy1qzunn4o1_400.gif');">
       
-       <input type="text" id="myInput" class="form-control" placeholder="Input" autofocus/>
-       
-      <!-- <div id="myOutput" class="glyphicon glyphicon-random"></div>  old output-->
-      </br>
+      <!--Upper Bound Input Box-->
+       <input type="text" id="myInput" class="form-control" placeholder="Input" autofocus/></br> 
+
        <p>Conversion <span class="glyphicon glyphicon-random"></span> </p>
-      
+
+       <!--Output Box is here:-->      
        <div class="panel panel-default">
        
-            <div id= "myOutput"class="panel-body" >Output</div>
+            <div id= "myOutput"class="panel-body">Output</div>
        
        </div>
+    </div>
 
+    <!--Footer-->
        <div class="information"><span class="glyphicon glyphicon-certificate"></span>Copy Output Information and paste into text box to decode the message</div>
         
 
@@ -34,6 +43,7 @@
         
     </body>
     
+    <!--Javascript Area-->
     <script type="text/javascript">
         
         $(document).ready( function(){
@@ -83,7 +93,5 @@
         
         
     </script>
-    
-    
-    
+       
 </html>
